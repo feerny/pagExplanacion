@@ -1,5 +1,19 @@
 
- 
+ .Pnuevo{
+  font-family: "Poppins", sans-serif;
+ }
+
+
+
+ .hnuevo{
+  font-size: 24px;
+  margin: 0;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+ }
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -317,7 +331,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero .hero-container {
   position: absolute;
   bottom: 0;
-  top: 221px;
+  top: 50px;
   left: 0;
   right: 0;
   display: flex;
@@ -339,7 +353,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
  
   font-size: 20px;
- 
+ width: 1084px;
   font-weight: 700;
   text-shadow: -1px 0 2px rgba(51, 170, 15, 0.733);
 }
@@ -482,8 +496,8 @@ section {
 }
 
 #organizador{
-  margin-left: -482px;
-    margin-top: -470px;
+  margin-left: -835px;
+  margin-top: -57px;
 }
 .about .container {
   position: relative;
@@ -491,12 +505,13 @@ section {
 }
 .about .content {
   padding: 30px 30px 30px 0;
-  margin-top:  -35px;
+  margin-top:  -13px;
 }
 .about .content h3 {
+  margin-top: 40px;
   font-weight: 700;
-  font-size: 34px;
-  color: rgba(19, 65, 5, 0.733);
+  font-size: 27px;
+  color: rgba(0, 0, 0, 0.733);
   margin-bottom: 30px;
 }
 .about .content p {
