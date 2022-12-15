@@ -54,10 +54,50 @@ h1, h2, h3, h4, h5, h6 {
   right: 15px;
   bottom: 15px;
   z-index: 998;
-  background: green;
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
+  background: rgb(8, 228, 8);
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  transition: all 0.4s;
+}
+.back-to-top2{
+  position: fixed;  
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 127px;
+  z-index: 998;
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  transition: all 0.4s;
+}
+
+.imgwas{
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  transition: all 0.4s;
+}
+
+
+.back-to-top3 {
+  position: fixed;  
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 75px;
+  z-index: 998;
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  transition: all 0.4s;
+}
+
+.imginst{
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
   transition: all 0.4s;
 }
 .back-to-top i {
@@ -66,7 +106,49 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 0;
 }
 .back-to-top:hover {
-  background: rgb(51, 170, 15);
+  background: rgb(8, 228, 8);
+  color: #fff;
+}
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.back-to-top3 i {
+  font-size: 24px;
+  color: #fff;
+  line-height: 0;
+}
+.back-to-top3:hover {
+  background: rgb(8, 228, 8);
+  color: #fff;
+}
+.back-to-top3.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.back-to-top2 i {
+  font-size: 24px;
+  color: #fff;
+  line-height: 0;
+}
+.back-to-top2:hover {
+  background: rgb(8, 228, 8);
+  color: #fff;
+}
+.back-to-top2.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.back-to-top i {
+  font-size: 24px;
+  color: #fff;
+  line-height: 0;
+}
+.back-to-top:hover {
+  background: rgb(8, 228, 8);
   color: #fff;
 }
 .back-to-top.active {
@@ -98,6 +180,30 @@ h1, h2, h3, h4, h5, h6 {
 #header.header-scrolled {
   background: rgba(51, 170, 15, 0.349);
   padding: 12px;
+  padding-left: 50px;
+}
+
+.imgcar{
+  margin-left: 47%;
+  color: rgba(19, 65, 5, 0.733);
+  width: 93px;
+  margin-bottom: -28px;
+}
+
+.bx {
+  font-family: boxicons!important;
+  font-weight: 400;
+  color: #41882b;
+  font-size: 47px;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+  display: inline-block;
+  text-transform: none;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 #header .logo h1 {
   font-size: 24px;
@@ -121,6 +227,24 @@ h1, h2, h3, h4, h5, h6 {
   #header.header-scrolled {
     padding: 15px 0;
   }
+}
+
+
+
+.img-fluid{
+  max-width: 100%;
+  height: auto;
+  width: 138px;
+  position: relative;
+  margin-top: -33px;
+  margin-left: 5px;
+}
+
+.img-fluid2{
+  max-width: 100%;
+  height: auto;
+  position: relative;
+
 }
 
 /*--------------------------------------------------------------
@@ -160,6 +284,8 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 0;
   margin-left: 5px;
 }
+
+
 .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
   background: rgba(51, 170, 15, 0.733);
 }
@@ -310,7 +436,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(rgba(18, 70, 3, 0.404), rgba(24, 90, 4, 0)), url("../img/portfolio/fondo.jpg") top center;
+  background: linear-gradient(rgba(18, 70, 3, 0.404), rgba(24, 90, 4, 0)), url("../img/imgfondo.png") top center;
   background-size: cover;
   position: relative;
   margin-bottom: -90px;
@@ -341,7 +467,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 } 
 #hero h1 {
-  margin: 0 0 10px 0;
+  margin: 67px 0 10px 0;
   font-size: 64px;
   font-weight: 500;
   line-height: 77px;
@@ -755,7 +881,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Portfolio
+# img-fluid
 --------------------------------------------------------------*/
 .portfolio .portfolio-item {
   margin-bottom: 30px;

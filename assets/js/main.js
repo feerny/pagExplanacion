@@ -105,6 +105,33 @@
     onscroll(document, toggleBacktotop)
   }
 
+
+  let backtotop2 = select('.back-to-top2')
+  if (backtotop2) {
+    const toggleBacktotop2 = () => {
+      if (window.scrollY > 100) {
+        backtotop2.classList.add('active')
+      } else {
+        backtotop2.classList.remove('active')
+      }
+    }
+    window.addEventListener('load', toggleBacktotop2)
+    onscroll(document, toggleBacktotop2)
+  }
+  
+  let backtotop3 = select('.back-to-top3')
+  if (backtotop3) {
+    const toggleBacktotop3 = () => {
+      if (window.scrollY > 100) {
+        backtotop3.classList.add('active')
+      } else {
+        backtotop3.classList.remove('active')
+      }
+    }
+    window.addEventListener('load', toggleBacktotop3)
+    onscroll(document, toggleBacktotop3)
+  }
+
   /**
    * Mobile nav toggle
    */
