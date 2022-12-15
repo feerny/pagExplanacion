@@ -1,4 +1,7 @@
 
+
+
+
  .Pnuevo{
   font-family: "Poppins", sans-serif;
  }
@@ -159,6 +162,9 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
+
+
+
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
     transition-delay: 0 !important;
@@ -606,6 +612,10 @@ section {
   padding: 60px 0;
   position: relative;
 }
+
+.infoAdi{
+  margin-top: 50px;
+}
 .about::before {
   content: "";
   position: absolute;
@@ -618,12 +628,22 @@ section {
 }
 
 #servicios{
-  width: 312px ;
+  width: 420px;
+}
+
+.infoTour{
+  margin-left: 449px;
+  margin-top: -514px;
+}
+
+.infoSegu{
+  margin-top: 50px;
 }
 
 #organizador{
-  margin-left: -835px;
-  margin-top: -57px;
+  margin-left: -1372px;
+  margin-top: -6px;
+
 }
 .about .container {
   position: relative;
@@ -634,14 +654,21 @@ section {
   margin-top:  -13px;
 }
 .about .content h3 {
-  margin-top: 40px;
+  margin-top: 47px;
   font-weight: 700;
-  font-size: 27px;
+  font-size: 28px;
   color: rgba(0, 0, 0, 0.733);
   margin-bottom: 30px;
 }
+
+.imgTrans{
+  width: 500px;
+  margin-left: 256px;
+}
 .about .content p {
   margin-bottom: 30px;
+  width: 386px;
+  margin-top: 44px;
 }
 .about .content .about-btn {
   display: inline-block;
@@ -677,6 +704,7 @@ section {
 .about .icon-boxes .icon-box p {
   font-size: 15px;
   color: black;
+  width: 335px;
 }
 @media (max-width: 1200px) {
   .about .content {
