@@ -654,11 +654,11 @@ section {
   
 }
 .about .content h3 {
-  margin-top: 47px;
+
   font-weight: 700;
-  font-size: 28px;
+  font-size: 25px;
   color: rgba(0, 0, 0, 0.733);
-  margin-bottom: 30px;
+
 }
 
 .imgTrans{
@@ -667,7 +667,8 @@ section {
 }
 .about .content p {
   margin-bottom: 30px;
-  margin-top: 44px;
+  color: black;
+
 }
 .about .content .about-btn {
   display: inline-block;
