@@ -240,10 +240,10 @@ h1, h2, h3, h4, h5, h6 {
 .img-fluid{
   max-width: 100%;
   height: auto;
-  width: 138px;
+  width: 120px;
   position: relative;
   margin-top: -33px;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 .img-fluid2{
@@ -614,7 +614,8 @@ section {
 }
 
 .infoAdi{
-  margin-top: 50px;
+  margin-top: -5rem;
+  margin-left: -30rem;
 }
 .about::before {
   content: "";
@@ -914,6 +915,8 @@ section {
 .portfolio .portfolio-item {
   margin-bottom: 30px;
 }
+
+
 .portfolio #portfolio-flters {
   padding: 0;
   margin: 0 auto 35px auto;
