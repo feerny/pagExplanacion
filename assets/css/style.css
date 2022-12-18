@@ -489,6 +489,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   text-shadow: -1px 0 2px rgba(51, 170, 15, 0.733);
 }
+
+.separador{
+  
+}
 #hero .btn-get-started {
   font-size: 36px;
   display: inline-block;
