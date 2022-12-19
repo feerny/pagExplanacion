@@ -490,8 +490,11 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: -1px 0 2px rgba(51, 170, 15, 0.733);
 }
 
-.separador{
-  
+.imgColibri{
+  margin-top: -500px;
+  margin-left: 1050px;
+  width: 400px;
+
 }
 #hero .btn-get-started {
   font-size: 36px;
