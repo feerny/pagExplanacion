@@ -494,6 +494,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: -500px;
   margin-left: 1050px;
   width: 400px;
+  transition: 0.3s ease-in-out;
 
 }
 #hero .btn-get-started {
