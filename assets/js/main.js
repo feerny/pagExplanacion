@@ -1,5 +1,5 @@
 
-(function() {
+(function () {
   "use strict";
 
   /**
@@ -118,7 +118,7 @@
     window.addEventListener('load', toggleBacktotop2)
     onscroll(document, toggleBacktotop2)
   }
-  
+
   let backtotop3 = select('.back-to-top3')
   if (backtotop3) {
     const toggleBacktotop3 = () => {
@@ -132,10 +132,12 @@
     onscroll(document, toggleBacktotop3)
   }
 
+
+
   /**
    * Mobile nav toggle
    */
-  on('click', '.mobile-nav-toggle', function(e) {
+  on('click', '.mobile-nav-toggle', function (e) {
     select('#navbar').classList.toggle('navbar-mobile')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
@@ -144,7 +146,7 @@
   /**
    * Mobile nav dropdowns activate
    */
-  on('click', '.navbar .dropdown > a', function(e) {
+  on('click', '.navbar .dropdown > a', function (e) {
     if (select('#navbar').classList.contains('navbar-mobile')) {
       e.preventDefault()
       this.nextElementSibling.classList.toggle('dropdown-active')
@@ -154,7 +156,7 @@
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
-  on('click', '.scrollto', function(e) {
+  on('click', '.scrollto', function (e) {
     if (select(this.hash)) {
       e.preventDefault()
 
@@ -193,9 +195,9 @@
 
       let portfolioFilters = select('#portfolio-flters li', true);
 
-      on('click', '#portfolio-flters li', function(e) {
+      on('click', '#portfolio-flters li', function (e) {
         e.preventDefault();
-        portfolioFilters.forEach(function(el) {
+        portfolioFilters.forEach(function (el) {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
@@ -203,7 +205,7 @@
         portfolioIsotope.arrange({
           filter: this.getAttribute('data-filter')
         });
-        portfolioIsotope.on('arrangeComplete', function() {
+        portfolioIsotope.on('arrangeComplete', function () {
           AOS.refresh()
         });
       }, true);
@@ -235,7 +237,109 @@
     }
   });
 
-  
+  /*traducciones*/
+  const carga_idiomas= ()=>{
+    const idiom=localStorage.getItem('idioma');
+    console.log(idiom);
+    if (idiom=="ingles") {
+      document.getElementById('titulo').textContent = "THE BRIDGE ECOLODGE"
+      document.getElementById('nav1').textContent = "Home"
+      document.getElementById('nav2').textContent = "Hostal"
+      document.getElementById('nav3').textContent = "Transportation"
+      document.getElementById('nav4').textContent = "Rates"
+      document.getElementById('nav5').textContent = "Images"
+      document.getElementById('nav6').textContent = "Contacts"
+      document.getElementById('texto1').textContent = "We look forward to sharing some time with you in this beautiful setting, there are 6 acres of gardens, wild jungle with a river and natural springs. We invite you to relax, explore and discover Colombia's incredible natural diversity in the flowers, fruit trees and birds that thrive here. The name, ECOLODGE EL PUENTE, was inspired by the elegant 4-arch bridge (puente) at the entrance that was once part of a railway line. It was only used once before the country fell into civil war 60 years ago and has never been used again. More evidence can be seen at the end of the road and several tunnels near the Santa Rita waterfalls. The property is owned by a Canadian family, his Colombian wife and their family, it was purchased in 2016, extensively renovated and opened in 2017. We hope you enjoy your time here, as we do."
+      document.getElementById('titleSC').textContent = "Complementary services"
+      document.getElementById('pSC').textContent = "Breakfast- served 7-10am outside reception- fresh local coffee available at 6-50. Guest kitchen- located in the log house- from 8:00 a.m. to 5:00 p.m. to 9:00 p.m. Wifi network Puente De La Explanación password salento123. Luggage storage- Luggage can be left at the reception before check-in at 2 p.m. and after check out at 11 am. Parking- Free secure parking, gate locked at night with light and security camera. Clothesline- covered drying lines of the log house, feel free to use them. Bonfire- on request if weather permits. While you are staying with us you will be covered by our courtesy insurance policy (health and valuables)."
+      document.getElementById('titleSdad').textContent = "SECURITY"
+      document.getElementById('pSdad').textContent = "Boquia is very safe, a family community, everyone knows each other and is very friendly. The road is well lit at night. So far, in 5 years we have never had a theft or problem here. The dogs also act as a visual impediment, but in fact they are big babies, they bark when you arrive and they will greet you, don't be scared, they don't bite, they are very trustworthy with people, we only ask you not to run because they think it's a game and could hurt you. We also have a camera system that records the activities of the last two months. Lockers are provided in bedrooms, we also have a safe at reception if you want to store any valuables for added security."
+      document.getElementById('titleTC').textContent = "COFFEE TOURS"
+      document.getElementById('pTC').innerHTML = "See how coffee is grown, harvested, roasted- savor freshly brewed coffee for that We recommend the following coffee farms.<br >.Don Elias<br >.La Arzacia<br >.El ocaso<br >- Our horse guide usually goes here<br >- English and Spanish, excursions on request Ocaso travel times approx. 1 hour and a half, you can go at any time of the day, until 6 in the afternoon. It is a rather interesting activity to be carried out here in Salento, it is one of the characteristics that Quindío has, which is coffee and the information they provide us is always very complete."
+      document.getElementById('titleSA').textContent="ADDITIONAL SERVICES"
+      document.getElementById('servicios').innerHTML='-Laundry- 20,000 per load. Please allow up to 24 hours to dry depending on the weather as we dry it naturally. <br> -Mountain bikes- 2 bikes 40,000 (each) per day. <br> -Bar- club colombia <i style="font-size: 15px; color: black">(6.000)</i> - gold, red and black- wine red <i style="font-size: 15px; color: black">(40,000)</i>, better and cheaper than in salento- glass of wine <i style="font-size: 15px; color: black">(12.000)</i>- Ron Cartavio <i style="font-size: 15px; color: black">(60,000)</i>- shot of rum <i style="font-size: 15px; color: black">(6,000)</ <br> -Breakfast- if you arrive before check-in or are very hungry, you will be charged 12,000 if you order breakfast. <br>-dinner- vegetarian or with meat <i style="font-size: 15px; color: black">(3 hours in advance as it is served at 7PM)</i> 25,000. <br>'
+      document.getElementById('titleTR').textContent="TRANSPORTATION"
+      document.getElementById('pTR').innerHTML="<b> -Private transportation:</b> <br> *Salento 20,000 <br> *Armenia airport 140,000 <br> *Armenia terminal 100,000 <br> *Pereira airport 160,000 <br> *pereira terminal 140,000 <br> *santa rosa 300,000 <br> *cocora 60,000 <br> *Filandia 70,000 <br>"
+      document.getElementById('pTR2').innerHTML="<b> -Public transportation:</b> <br> *SALENTO- usually the bus runs every 20 minutes, <br> it costs 1,500 from boquia to Salento, it's 10 minutes until<br> the main park. the first bus leaves at 6:00-6.30<br> A.M. and The last bus leaves at 9:00 p.m.<br> *ARMENIA- On this side of the road, look for the <br> sign in the driver's window that says for <br> Salento since they also pass to Pereira, it costs 3,900<br> From Boquia and from Salento it costs 5,500, to Armenia <br> with a process of 40-50 minutes.<br> *PEREIRA- On this side of the road, without fixed hours, so <br> general every hour and a half, $8,000, 50 minutes to the <br> terminal transportation.<br> *Medellin- take the bus directly from Salento<br> (usually medium to large size bus). 8:30 a.m.<br> 4:30 pm. 8:30 pm. The salento bus station is located<br> at the entrance of the town before the fire station.<br>"
+      document.getElementById('titleTfas').textContent="Rates"
+      document.getElementById('pTfas').textContent="These are the rates for our rooms."
+      document.getElementById('pTfas2').innerHTML='<i>(40,000 per person addition)</i>'
+      document.getElementById('pTfas3').innerHTML='PRIVATE ROOM WITH BATHROOM (CAPACITYX2)'
+      document.getElementById('pTfas4').innerHTML='PUBLIC BATHROOM GROUP ROOM (CAPACITYX9)'
+      document.getElementById('pTfas5').innerHTML='FAMILY ROOM WITH BATHROOM (CAPACITYX5)'
+      document.getElementById('pTfas6').innerHTML='PRIVATE TENT (CAPACITYX2)'
+      document.getElementById('pTfas7').innerHTML='ZENZU CABIN (CAPACITYX2)'
+      document.getElementById('titlePlio').innerHTML='Images'
+      document.getElementById('pPlio').innerHTML='some images for you to know us more <br> <i> (choose the section of images you want to see) </i>'
+      document.getElementById('filtHabi').innerHTML='bedrooms'
+      document.getElementById('filtPaije').innerHTML='landscape photos'
+      document.getElementById('titleContact').innerHTML='Contacts'
+      document.getElementById('pContact').innerHTML='If you want to make a reservation please contact us to advise you.'
+      document.getElementById('titleDir').innerHTML='Our address'
+      document.getElementById('titleTel').innerHTML='phone number'
+
+      btnIn.classList.remove("active")
+      btnIn2.classList.add("active")
+      
+    }
+  }
+  window.onload=function() {
+    carga_idiomas()
+  }
+  const btnIn = document.getElementById('btn-in')
+  const btnIn2 = document.getElementById('btn-in2')
+  const cambio_A_Ingles = () => {
+
+    localStorage.setItem('idioma', 'ingles');
+
+    btnIn.classList.remove("active")
+    btnIn2.classList.add("active")
+
+    document.getElementById('titulo').textContent = "THE BRIDGE ECOLODGE"
+    document.getElementById('nav1').textContent = "Home"
+    document.getElementById('nav2').textContent = "Hostal"
+    document.getElementById('nav3').textContent = "Transportation"
+    document.getElementById('nav4').textContent = "Rates"
+    document.getElementById('nav5').textContent = "Images"
+    document.getElementById('nav6').textContent = "Contacts"
+    document.getElementById('texto1').textContent = "We look forward to sharing some time with you in this beautiful setting, there are 6 acres of gardens, wild jungle with a river and natural springs. We invite you to relax, explore and discover Colombia's incredible natural diversity in the flowers, fruit trees and birds that thrive here. The name, ECOLODGE EL PUENTE, was inspired by the elegant 4-arch bridge (puente) at the entrance that was once part of a railway line. It was only used once before the country fell into civil war 60 years ago and has never been used again. More evidence can be seen at the end of the road and several tunnels near the Santa Rita waterfalls. The property is owned by a Canadian family, his Colombian wife and their family, it was purchased in 2016, extensively renovated and opened in 2017. We hope you enjoy your time here, as we do."
+    document.getElementById('titleSC').textContent = "Complementary services"
+    document.getElementById('pSC').textContent = "Breakfast- served 7-10am outside reception- fresh local coffee available at 6-50. Guest kitchen- located in the log house- from 8:00 a.m. to 5:00 p.m. to 9:00 p.m. Wifi network Puente De La Explanación password salento123. Luggage storage- Luggage can be left at the reception before check-in at 2 p.m. and after check out at 11 am. Parking- Free secure parking, gate locked at night with light and security camera. Clothesline- covered drying lines of the log house, feel free to use them. Bonfire- on request if weather permits. While you are staying with us you will be covered by our courtesy insurance policy (health and valuables)."
+    document.getElementById('titleSdad').textContent = "SECURITY"
+    document.getElementById('pSdad').textContent = "Boquia is very safe, a family community, everyone knows each other and is very friendly. The road is well lit at night. So far, in 5 years we have never had a theft or problem here. The dogs also act as a visual impediment, but in fact they are big babies, they bark when you arrive and they will greet you, don't be scared, they don't bite, they are very trustworthy with people, we only ask you not to run because they think it's a game and could hurt you. We also have a camera system that records the activities of the last two months. Lockers are provided in bedrooms, we also have a safe at reception if you want to store any valuables for added security."
+    document.getElementById('titleTC').textContent = "COFFEE TOURS"
+    document.getElementById('pTC').innerHTML = "See how coffee is grown, harvested, roasted- savor freshly brewed coffee for that We recommend the following coffee farms.<br >.Don Elias<br >.La Arzacia<br >.El ocaso<br >- Our horse guide usually goes here<br >- English and Spanish, excursions on request Ocaso travel times approx. 1 hour and a half, you can go at any time of the day, until 6 in the afternoon. It is a rather interesting activity to be carried out here in Salento, it is one of the characteristics that Quindío has, which is coffee and the information they provide us is always very complete."
+    document.getElementById('titleSA').textContent="ADDITIONAL SERVICES"
+    document.getElementById('servicios').innerHTML='-Laundry- 20,000 per load. Please allow up to 24 hours to dry depending on the weather as we dry it naturally. <br> -Mountain bikes- 2 bikes 40,000 (each) per day. <br> -Bar- club colombia <i style="font-size: 15px; color: black">(6.000)</i> - gold, red and black- wine red <i style="font-size: 15px; color: black">(40,000)</i>, better and cheaper than in salento- glass of wine <i style="font-size: 15px; color: black">(12.000)</i>- Ron Cartavio <i style="font-size: 15px; color: black">(60,000)</i>- shot of rum <i style="font-size: 15px; color: black">(6,000)</ <br> -Breakfast- if you arrive before check-in or are very hungry, you will be charged 12,000 if you order breakfast. <br>-dinner- vegetarian or with meat <i style="font-size: 15px; color: black">(3 hours in advance as it is served at 7PM)</i> 25,000. <br>'
+    document.getElementById('titleTR').textContent="TRANSPORTATION"
+    document.getElementById('pTR').innerHTML="<b> -Private transportation:</b> <br> *Salento 20,000 <br> *Armenia airport 140,000 <br> *Armenia terminal 100,000 <br> *Pereira airport 160,000 <br> *pereira terminal 140,000 <br> *santa rosa 300,000 <br> *cocora 60,000 <br> *Filandia 70,000 <br>"
+    document.getElementById('pTR2').innerHTML="<b> -Public transportation:</b> <br> *SALENTO- usually the bus runs every 20 minutes, <br> it costs 1,500 from boquia to Salento, it's 10 minutes until<br> the main park. the first bus leaves at 6:00-6.30<br> A.M. and The last bus leaves at 9:00 p.m.<br> *ARMENIA- On this side of the road, look for the <br> sign in the driver's window that says for <br> Salento since they also pass to Pereira, it costs 3,900<br> From Boquia and from Salento it costs 5,500, to Armenia <br> with a process of 40-50 minutes.<br> *PEREIRA- On this side of the road, without fixed hours, so <br> general every hour and a half, $8,000, 50 minutes to the <br> terminal transportation.<br> *Medellin- take the bus directly from Salento<br> (usually medium to large size bus). 8:30 a.m.<br> 4:30 pm. 8:30 pm. The salento bus station is located<br> at the entrance of the town before the fire station.<br>"
+    document.getElementById('titleTfas').textContent="Rates"
+    document.getElementById('pTfas').textContent="These are the rates for our rooms."
+    document.getElementById('pTfas2').innerHTML='<i>(40,000 per person addition)</i>'
+    document.getElementById('pTfas3').innerHTML='PRIVATE ROOM WITH BATHROOM (CAPACITYX2)'
+    document.getElementById('pTfas4').innerHTML='PUBLIC BATHROOM GROUP ROOM (CAPACITYX9)'
+    document.getElementById('pTfas5').innerHTML='FAMILY ROOM WITH BATHROOM (CAPACITYX5)'
+    document.getElementById('pTfas6').innerHTML='PRIVATE TENT (CAPACITYX2)'
+    document.getElementById('pTfas7').innerHTML='ZENZU CABIN (CAPACITYX2)'
+    document.getElementById('titlePlio').innerHTML='Images'
+    document.getElementById('pPlio').innerHTML='some images for you to know us more <br> <i> (choose the section of images you want to see) </i>'
+    document.getElementById('filtHabi').innerHTML='bedrooms'
+    document.getElementById('filtPaije').innerHTML='landscape photos'
+    document.getElementById('titleContact').innerHTML='Contacts'
+    document.getElementById('pContact').innerHTML='If you want to make a reservation please contact us to advise you.'
+    document.getElementById('titleDir').innerHTML='Our address'
+    document.getElementById('titleTel').innerHTML='phone number'
+   }
+  btnIn.addEventListener('click', cambio_A_Ingles)
+  const cambio_A_Español = () => {
+
+    localStorage.setItem('idioma', 'español');
+    window.location.reload()
+    btnIn2.classList.remove("active")
+    btnIn.classList.add("active")
+   }
+  btnIn2.addEventListener('click', cambio_A_Español)
 
 
 
