@@ -7,28 +7,47 @@
  }
 
  .fotosCont{
-  transition: all 2.3s;
+  transition:  .5s ease;
   padding: 40px;
   background-color: #9fdd8c;
   display: flex;
-  flex-direction: column;
+  
   align-items: center;
   position: relative;
  }
 
  .fotosCont p{
   color: black;
+  padding-left: 10rem;
  }
 
  .fotosCont img{
   width: 600px;
+  margin-left: 5rem;
   
  }
 
  .fotosCont button{
-  margin-left: 550px;
-  margin-bottom: 5px;
+  border: none;
+  background-color: transparent;
+  margin-right: 4rem;
+  margin-bottom: 30rem;
  }
+ .fotosCont button:hover{
+  filter: invert(100%);
+ }
+
+
+
+ .fotosCont button img{
+  width: 30px;
+  transition:  .5s ease;
+ }
+ .fotosCont button img:hover{
+  width: 35px;
+ }
+
+
  .none{
   display: none;
  }

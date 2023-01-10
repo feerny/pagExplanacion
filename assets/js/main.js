@@ -239,6 +239,8 @@
 
   /*nuevos escripts*/
 
+
+
   const contenedorTarifas=document.getElementById("contenedorTarifas")
   const contenedorImg=document.getElementById("contenedorImg")
   const habi1 = document.getElementById("habi1")
@@ -249,7 +251,7 @@
 
 
   habi1.addEventListener("click",()=>{
-    contenedorImg.innerHTML='<button id="fotosContButton">X</button><img src="./assets/img/portfolio/habitacion.jpg" alt=""><p>Colibri privada con baño. 290</p>'
+    contenedorImg.innerHTML='<button id="fotosContButton"><img src="./assets/img/botonVolver.png" alt=""></button><img src="./assets/img/imgHabi/colibriPrivada.jpg" alt=""><p>HABITACION PRIVADA CON BAÑO</p>'
     contenedorTarifas.classList.add("none")
     contenedorImg.classList.remove("none")
     contenedorImg.classList.add("fotosCont")
@@ -259,11 +261,39 @@
     buttonCloseImg.addEventListener("click",()=>{
       contenedorImg.classList.add("none")
       contenedorTarifas.classList.remove("none")
-    
+     
     })
   })
 
+  habi2.addEventListener("click",()=>{
+    contenedorImg.innerHTML='<button id="fotosContButton"><img src="./assets/img/botonVolver.png" alt=""></button><img src="./assets/img/imgHabi/familiarPublico.jpg" alt=""><p>HABITACION FAMILIAR BAÑO PUBLICO</p>'
+    contenedorTarifas.classList.add("none")
+    contenedorImg.classList.remove("none")
+    contenedorImg.classList.add("fotosCont")
 
+    
+    const buttonCloseImg=document.getElementById("fotosContButton")
+    buttonCloseImg.addEventListener("click",()=>{
+      contenedorImg.classList.add("none")
+      contenedorTarifas.classList.remove("none")
+     
+    })
+  })
+
+  habi3.addEventListener("click",()=>{
+    contenedorImg.innerHTML='<button id="fotosContButton"><img src="./assets/img/botonVolver.png" alt=""></button><img src="./assets/img/imgHabi/familiarPrivada.jpg" alt=""><p>HABITACION FAMILIAR CON BAÑO</p>'
+    contenedorTarifas.classList.add("none")
+    contenedorImg.classList.remove("none")
+    contenedorImg.classList.add("fotosCont")
+
+    
+    const buttonCloseImg=document.getElementById("fotosContButton")
+    buttonCloseImg.addEventListener("click",()=>{
+      contenedorImg.classList.add("none")
+      contenedorTarifas.classList.remove("none")
+     
+    })
+  })
 
 
   /*traducciones*/
