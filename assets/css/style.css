@@ -6,6 +6,33 @@
   font-family: "Poppins", sans-serif;
  }
 
+ .fotosCont{
+  transition: all 2.3s;
+  padding: 40px;
+  background-color: #9fdd8c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+ }
+
+ .fotosCont p{
+  color: black;
+ }
+
+ .fotosCont img{
+  width: 600px;
+  
+ }
+
+ .fotosCont button{
+  margin-left: 550px;
+  margin-bottom: 5px;
+ }
+ .none{
+  display: none;
+ }
+
 
 
  .hnuevo{
