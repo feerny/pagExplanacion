@@ -297,10 +297,14 @@
 
 
   /*traducciones*/
+  const btnIn = document.getElementById('btn-in')
+  const btnIn2 = document.getElementById('btn-in2')
   const carga_idiomas= ()=>{
     const idiom=localStorage.getItem('idioma');
     console.log(idiom);
     if (idiom=="ingles") {
+      btnIn.classList.remove("active")
+      btnIn2.classList.add("active")
       document.getElementById('titulo').textContent = "THE BRIDGE ECOLODGE"
       document.getElementById('nav1').textContent = "Home"
       document.getElementById('nav2').textContent = "Hostal"
@@ -322,6 +326,7 @@
       document.getElementById('pTR2').innerHTML="<b> -Public transportation:</b> <br> *SALENTO- usually the bus runs every 20 minutes, <br> it costs 1,500 from boquia to Salento, it's 10 minutes until<br> the main park. the first bus leaves at 6:00-6.30<br> A.M. and The last bus leaves at 9:00 p.m.<br> *ARMENIA- On this side of the road, look for the <br> sign in the driver's window that says for <br> Salento since they also pass to Pereira, it costs 3,900<br> From Boquia and from Salento it costs 5,500, to Armenia <br> with a process of 40-50 minutes.<br> *PEREIRA- On this side of the road, without fixed hours, so <br> general every hour and a half, $8,000, 50 minutes to the <br> terminal transportation.<br> *Medellin- take the bus directly from Salento<br> (usually medium to large size bus). 8:30 a.m.<br> 4:30 pm. 8:30 pm. The salento bus station is located<br> at the entrance of the town before the fire station.<br>"
       document.getElementById('titleTfas').textContent="Rates"
       document.getElementById('pTfas').textContent="These are the rates for our rooms."
+      document.getElementById('pTfas1').innerHTML='<i>(click to see the rooms)</i>'
       document.getElementById('pTfas2').innerHTML='<i>(40,000 per person addition)</i>'
       document.getElementById('pTfas3').innerHTML='PRIVATE ROOM WITH BATHROOM (CAPACITYX2)'
       document.getElementById('pTfas4').innerHTML='PUBLIC BATHROOM GROUP ROOM (CAPACITYX9)'
@@ -330,23 +335,18 @@
       document.getElementById('pTfas7').innerHTML='ZENZU CABIN (CAPACITYX2)'
       document.getElementById('titlePlio').innerHTML='Images'
       document.getElementById('pPlio').innerHTML='some images for you to know us more <br> <i> (choose the section of images you want to see) </i>'
-      document.getElementById('filtHabi').innerHTML='bedrooms'
-      document.getElementById('filtPaije').innerHTML='landscape photos'
       document.getElementById('titleContact').innerHTML='Contacts'
       document.getElementById('pContact').innerHTML='If you want to make a reservation please contact us to advise you.'
       document.getElementById('titleDir').innerHTML='Our address'
       document.getElementById('titleTel').innerHTML='phone number'
 
-      btnIn.classList.remove("active")
-      btnIn2.classList.add("active")
       
     }
   }
   window.onload=function() {
     carga_idiomas()
   }
-  const btnIn = document.getElementById('btn-in')
-  const btnIn2 = document.getElementById('btn-in2')
+
   const cambio_A_Ingles = () => {
 
     localStorage.setItem('idioma', 'ingles');
@@ -375,6 +375,7 @@
     document.getElementById('pTR2').innerHTML="<b> -Public transportation:</b> <br> *SALENTO- usually the bus runs every 20 minutes, <br> it costs 1,500 from boquia to Salento, it's 10 minutes until<br> the main park. the first bus leaves at 6:00-6.30<br> A.M. and The last bus leaves at 9:00 p.m.<br> *ARMENIA- On this side of the road, look for the <br> sign in the driver's window that says for <br> Salento since they also pass to Pereira, it costs 3,900<br> From Boquia and from Salento it costs 5,500, to Armenia <br> with a process of 40-50 minutes.<br> *PEREIRA- On this side of the road, without fixed hours, so <br> general every hour and a half, $8,000, 50 minutes to the <br> terminal transportation.<br> *Medellin- take the bus directly from Salento<br> (usually medium to large size bus). 8:30 a.m.<br> 4:30 pm. 8:30 pm. The salento bus station is located<br> at the entrance of the town before the fire station.<br>"
     document.getElementById('titleTfas').textContent="Rates"
     document.getElementById('pTfas').textContent="These are the rates for our rooms."
+    document.getElementById('pTfas1').innerHTML='<i>(click to see the rooms)</i>'
     document.getElementById('pTfas2').innerHTML='<i>(40,000 per person addition)</i>'
     document.getElementById('pTfas3').innerHTML='PRIVATE ROOM WITH BATHROOM (CAPACITYX2)'
     document.getElementById('pTfas4').innerHTML='PUBLIC BATHROOM GROUP ROOM (CAPACITYX9)'
@@ -383,8 +384,6 @@
     document.getElementById('pTfas7').innerHTML='ZENZU CABIN (CAPACITYX2)'
     document.getElementById('titlePlio').innerHTML='Images'
     document.getElementById('pPlio').innerHTML='some images for you to know us more <br> <i> (choose the section of images you want to see) </i>'
-    document.getElementById('filtHabi').innerHTML='bedrooms'
-    document.getElementById('filtPaije').innerHTML='landscape photos'
     document.getElementById('titleContact').innerHTML='Contacts'
     document.getElementById('pContact').innerHTML='If you want to make a reservation please contact us to advise you.'
     document.getElementById('titleDir').innerHTML='Our address'

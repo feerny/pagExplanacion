@@ -1,7 +1,4 @@
 
-
-
-
  .Pnuevo{
   font-family: "Poppins", sans-serif;
  }
@@ -42,9 +39,6 @@
  .fotosCont button img{
   width: 30px;
   transition:  .5s ease;
- }
- .fotosCont button img:hover{
-  width: 35px;
  }
 
 
